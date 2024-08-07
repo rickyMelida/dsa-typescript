@@ -4,7 +4,7 @@ Data Structures and algorithms following the [Udemy course](https://www.udemy.co
 
 
 
-## 🛠 Technologys
+## 🛠 Technologies
 Typescript, Jest.
 
 
