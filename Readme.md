@@ -21,7 +21,12 @@ Install all dev dependencies
 ```bash
   npm install -D
 ```
-    
+
+Run all tests
+
+```bash
+  npm test 
+```    
 ## Authors
 
 - [@rickyMelida](https://www.github.com/rickyMelida)
