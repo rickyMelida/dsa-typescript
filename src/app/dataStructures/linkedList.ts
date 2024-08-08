@@ -6,6 +6,21 @@ export class ListNode<T> {
     public value: T | null = null,
     public next: ListNode<T> | null = null
   ) {}
+
+  addLast(val: T) {
+    const newNode = new ListNode<T>(val);
+
+    if (!this.next) {
+      this.next = newNode;
+      return;
+    }
+
+    let current: ListNode<T> | null = this.next;
+    while (current?.next) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
 }
 
 export class LinkedList<T> {

@@ -9,10 +9,8 @@ describe("Conversions tests suite", () => {
 
   beforeEach(() => {
     listNode = new ListNode<number>(1);
-    listNode.next = new ListNode<number>(2);
-    listNode.next.next = new ListNode<number>(3);
-    listNode.next.next.next = new ListNode<number>(4);
-    listNode.next.next.next.next = new ListNode<number>(5);
+    for (let i = 2; i <= 5; i++)
+      listNode.addLast(i);
   });
 
   it("should take a array and return an linked list node", () => {
