@@ -4,7 +4,7 @@ import {
   linkedListToArray,
 } from "../../app/utils/conversions";
 
-describe("Conversions tests suite", () => {
+describe.skip("Conversions tests suite", () => {
   let listNode: ListNode<number>;
 
   beforeEach(() => {

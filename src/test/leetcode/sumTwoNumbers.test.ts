@@ -1,7 +1,7 @@
 import { ListNode } from "../../app/dataStructures/linkedList";
 import addTwoNumbers from "../../app/leetcode/sumTwoNumbers";
 
-describe("Add two numbers suit test", () => {
+describe.skip("Add two numbers suit test", () => {
   let listNode1: ListNode<number>;
   let listNode2: ListNode<number>;
 

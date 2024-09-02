@@ -6,31 +6,16 @@ export class ListNode<T> {
     public value: T | null = null,
     public next: ListNode<T> | null = null
   ) {}
-
-  addLast(val: T) {
-    const newNode = new ListNode<T>(val);
-
-    if (!this.next) {
-      this.next = newNode;
-      return;
-    }
-
-    let current: ListNode<T> | null = this.next;
-    while (current?.next) {
-      current = current.next;
-    }
-    current.next = newNode;
-  }
 }
 
 export class LinkedList<T> {
   public head: ListNode<T> | null = null;
 
-  constructor(n: ListNode<T>) {
+  constructor(n: ListNode<T> | null = null) {
     this.head = n ? n : null;
   }
 
-  addLast(value: T) {
+  appendToTail(value: T) {
     if (!this.head) {
       this.head = new ListNode(value);
       return;
@@ -41,5 +26,37 @@ export class LinkedList<T> {
       current = current.next;
     }
     current.next = new ListNode(value);
+  }
+
+  deleteNode(value: T) {
+    if(!this.head) return;
+
+    if(this.head.value == value){
+      this.head = this.head.next;
+      return;
+    }
+    // 4-3-2-1
+    let current: ListNode<T> = this.head;
+    while(current.next){
+      if(current.next.value == value){
+        current.next = current.next.next;
+        return;
+      }
+      current = current.next;
+    }
+  }
+
+  print() {
+    if(!this.head){
+      console.log("END");
+      return;
+    }
+
+    let current: ListNode<T> = this.head;
+    while(current.next) {
+      console.log(current.value + " -> ");
+      current = current.next;
+    }
+    console.log(current.value + " -> END ");
   }
 }
