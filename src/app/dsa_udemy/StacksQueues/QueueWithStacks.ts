@@ -16,7 +16,9 @@ export default class QueueWithStacks<T> {
   firstStack: Stack<T> = new Stack();
   secondStack: Stack<T> = new Stack();
 
-  add(value: T) {}
+  add(value: T) {
+    this.firstStack.push(value);
+  }
 
   peek() {}
 

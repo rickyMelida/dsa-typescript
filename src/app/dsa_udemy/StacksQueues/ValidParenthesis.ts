@@ -25,7 +25,6 @@ export const validParenthesis = (s: string): boolean => {
       if (stack.isEmpty() || stack.pop() != c) return false;
     }
   }
-  console.log(stack)
   return stack.isEmpty();
 };
 

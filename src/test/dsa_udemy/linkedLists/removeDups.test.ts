@@ -10,12 +10,12 @@ describe("Remove dups suite tests", () => {
     head.next.next.next.next = new ListNode<number>(4);
     head.next.next.next.next.next = new ListNode<number>(1);
 
-    const actual = removeDups<number>(head);
-
+    removeDups<number>(head);
+    
     expect(head.value).toBe(1);
     expect(head.next.value).toBe(2);
     expect(head.next.next.value).toBe(3);
     expect(head.next.next.next.value).toBe(4);
-    expect(head.next.next.next.next.value).toBe(null);
+    expect(head.next.next.next.next).toBeUndefined();
   })
 })
