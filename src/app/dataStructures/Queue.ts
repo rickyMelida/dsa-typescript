@@ -16,11 +16,11 @@ export default class Queue<T> {
       this.first = this.last;
   }
 
-  remove(): T {
+  remove(){
     if (this.first == null)
       throw new Error("The queue is empty!");
 
-    const firstValue: T = this.first.value;
+    const firstValue= this.first.value;
     this.first = this.first.next;
 
     if (this.first == null) 
@@ -29,7 +29,7 @@ export default class Queue<T> {
     return firstValue;
   }
 
-  peek(): T {
+  peek(){
     if (this.first == null) 
       throw new Error("The queue is empty!");
 

@@ -2,10 +2,10 @@
  * https://dev.to/glebirovich/typescript-data-structures-linked-list-3o8i
  */
 export class ListNode<T> {
-  public value: T;
+  public value: T | null;
   public next!: ListNode<T>;
 
-  constructor(value: T) {
+  constructor(value: T | null = null) {
     this.value = value;
   }
 }

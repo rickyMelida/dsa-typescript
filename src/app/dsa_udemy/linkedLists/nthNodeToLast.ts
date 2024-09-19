@@ -14,14 +14,14 @@ export const nthNodeToLast = (head: ListNode<number>, n: number) => {
 
   // Avanzamos n posiciones con el primer puntero
   for (let i = 0; i < n; i++) {
-    if (p1 === null) {
+    if (p1.value === null) {
       return null;
     }
     p1 = p1.next;
   }
 
   // Avanzamos ambos al mismo ritmo hasta que el puntero avanzado llegue al final
-  while (p1 !== null) {
+  while (p1.next !== null) {
     p1 = p1.next;
     p2 = p2 ? p2.next : null;
   }

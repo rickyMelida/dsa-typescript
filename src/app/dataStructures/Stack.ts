@@ -4,24 +4,26 @@ export default class Stack<T> {
   private top: ListNode<T> | null = null;
 
   push(value: T): void {
-    if (this.top == null) 
+    if (this.top == null){
       this.top = new ListNode<T>(value);
+      return;
+    }
 
     const newTop: ListNode<T> = new ListNode<T>(value);
     newTop.next = this.top;
     this.top = newTop;
   }
 
-  pop(): T {
+  pop(){
     if (this.top == null) 
       throw new Error("The top is empty!");
 
-    const topValue: T = this.top.value;
+    const topValue = this.top.value;
     this.top = this.top.next;
     return topValue;
   }
 
-  peek(): T {
+  peek(){
     if (this.top == null) 
       throw new Error("The top is empty!");
 
