@@ -9,11 +9,11 @@ describe("Nth Node to last suite test", () => {
     list.next.next = new ListNode<number>(4);
     list.next.next.next = new ListNode<number>(6);
     
-    expect(nthNodeToLast(list, 1)?.value).toBe(6);
-    expect(nthNodeToLast(list, 2)?.value).toBe(4);
-    expect(nthNodeToLast(list, 3)?.value).toBe(2);
-    expect(nthNodeToLast(list, 4)?.value).toBe(1);
-    expect(nthNodeToLast(list, 5)?.value).toBeUndefined();
+    expect(nthNodeToLast(list, 1)).toBe(6);
+    expect(nthNodeToLast(list, 2)).toBe(4);
+    expect(nthNodeToLast(list, 3)).toBe(2);
+    expect(nthNodeToLast(list, 4)).toBe(1);
+    expect(nthNodeToLast(list, 5)).toBeNull();
     
   })
 })

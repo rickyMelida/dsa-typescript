@@ -3,7 +3,7 @@
  */
 export class ListNode<T> {
   public value: T | null;
-  public next!: ListNode<T>;
+  public next: ListNode<T> | null = null;
 
   constructor(value: T | null = null) {
     this.value = value;
