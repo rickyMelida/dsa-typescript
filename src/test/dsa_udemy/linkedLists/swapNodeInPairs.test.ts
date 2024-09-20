@@ -15,6 +15,6 @@ describe("swap node in pairs suite test", () => {
     expect(actual?.next?.value).toBe(1);
     expect(actual?.next?.next?.value).toBe(6);
     expect(actual?.next?.next?.next?.value).toBe(4);
-    expect(actual?.next?.next?.next?.next.value).toBe(8);
+    expect(actual?.next?.next?.next?.next?.value).toBe(8);
   })
 })

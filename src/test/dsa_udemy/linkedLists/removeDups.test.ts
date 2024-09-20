@@ -16,6 +16,6 @@ describe("Remove dups suite tests", () => {
     expect(head.next.value).toBe(2);
     expect(head.next.next.value).toBe(3);
     expect(head.next.next.next.value).toBe(4);
-    expect(head.next.next.next.next).toBeUndefined();
+    expect(head.next.next.next.next).toBeNull();
   })
 })
